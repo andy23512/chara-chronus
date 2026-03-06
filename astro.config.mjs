@@ -11,4 +11,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  site: "https://andy23512.github.io",
+
+  base: "/chara-chronicle",
 });
