@@ -12,6 +12,6 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 	<ShootingStars client:load/>
 	<StarsBackground client:load/>
-	<HeaderPage client:load/>
-	<TimelinePages client:load/>
+	<HeaderPage client:only/>
+	<TimelinePages client:only/>
 </Layout>

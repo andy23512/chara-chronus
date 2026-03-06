@@ -77,23 +77,46 @@ function ClockLabel({
   readonly className: string;
   readonly clipPath: string;
 }) {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
   return (
     <g className={className} clipPath={clipPath}>
       {hours.map(({ hour, label }) => {
-        const degree = hour * 30 - 90;
-        const x = (R1 - 120) * cos(degree);
-        const y = (R1 - 120) * sin(degree);
+        const degree = hour * 30;
         return (
           <text
             key={hour}
-            x={x}
-            y={y}
+            x={0}
+            y={-(R1 - 120)}
             textAnchor="middle"
             dominantBaseline="middle"
             className="font-roboto"
             fontSize={250}
-            transform={`rotate(${degree + 90}, ${x}, ${y})`}
           >
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              from={prefersReducedMotion ? `${degree} 0 0` : "0 0 0"}
+              to={`${degree} 0 0`}
+              dur={prefersReducedMotion ? "0s" : `${(1 * hour) / 12}s`}
+              repeatCount="1"
+              fill="freeze"
+              keySplines="0.1 0.8 0.2 1"
+              keyTimes="0;1"
+              calcMode="spline"
+            />
+            <animate
+              attributeName="opacity"
+              values={prefersReducedMotion ? "1;1" : "0;1"}
+              dur={prefersReducedMotion ? "0s" : `${(1 * hour) / 12}s`}
+              repeatCount="1"
+              fill="freeze"
+              keySplines="0.1 0.8 0.2 1"
+              keyTimes="0;1"
+              calcMode="spline"
+            />
             {label}
           </text>
         );
@@ -104,7 +127,7 @@ function ClockLabel({
 
 function Clock() {
   return (
-    <svg className="size-full bg-gray-900" viewBox="-205 -205 410 410">
+    <svg className="size-full" viewBox="-205 -205 410 410">
       <defs>
         <clipPath id="whiteClip">
           <path d={white} className="fill-transparent"></path>

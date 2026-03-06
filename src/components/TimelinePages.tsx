@@ -54,8 +54,7 @@ const timelineData: TimelineYearEntry[] = [
     items: [
       {
         time: "Aug",
-        description:
-          "The beta of CCIO started. It's a revolutionary typing game and integrated platform, combining educational tools, MMO elements, social networking, and device management functions.",
+        description: "The beta of CCIO started.",
       },
       { time: "Nov", description: "ChorderCon 2025 was held." },
       { time: "Nov", description: "CCU was revealed in ChorderCon 2025." },
@@ -75,7 +74,7 @@ export function TimelinePages() {
             <div className="size-64 flex-none sticky font-bold text-6xl text-gray-10 flex items-center justify-center">
               {entry.year}
             </div>
-            <div className="flex-none flex items-center justify-center gap-8 flex-col w-[500px]">
+            <div className="flex-none flex items-center justify-center gap-8 flex-col w-[520px]">
               <h1 className="text-3xl lg:text-5xl font-bold">{entry.title}</h1>
               <ul className="flex flex-col lg:text-xl">
                 {entry.items.map((item, index) => (
