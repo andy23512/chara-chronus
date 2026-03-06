@@ -8,9 +8,11 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>CharaChronicle - An unofficial chronicle of CharaChorder</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 	</head>
 	<body class="dark">
 		<slot />
+		<a class="github-fork-ribbon" href="https://github.com/andy23512/chara-chronicle" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 	</body>
 </html>
 
@@ -19,4 +21,5 @@ import "../styles/global.css";
 	body {
 		margin: 0;
 	}
+	.github-fork-ribbon:before { background-color: #333; }
 </style>
