@@ -127,8 +127,8 @@ const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2025,
-    title: "CCIO",
-    // title: "CCIO & CCU",
+    title: "CCIO & CC2.1",
+    // title: "CCIO & CC2.1 & CCU",
     items: [
       {
         time: "Aug",
@@ -144,6 +144,17 @@ const timelineData: TimelineYearEntry[] = [
       },
       { time: "Nov", description: ["ChorderCon 2025 was held."] },
       // { time: "Nov", description: ["CCU was revealed in ChorderCon 2025."] },
+      {
+        time: "Nov",
+        description: [
+          {
+            type: "url",
+            url: "https://www.charachorder.com/products/cc2",
+            content: "CC2.1",
+          },
+          " was introduced.",
+        ],
+      },
     ],
   },
 ];
@@ -176,7 +187,7 @@ export function TimelinePages() {
                             href={desc.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="underline"
+                            className="underline underline-offset-4"
                           >
                             {desc.content}
                           </a>
