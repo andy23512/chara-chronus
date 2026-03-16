@@ -5,7 +5,22 @@ function HeaderPage() {
     <div className="h-screen flex items-center justify-center flex-wrap clock-background relative">
       <div className="flex gap-16 justify-center flex-col lg:flex-row items-center">
         <div className="size-64 flex-none">
-          <Clock />
+          <Clock
+            labels={[
+              "Ⅰ",
+              "Ⅱ",
+              "Ⅲ",
+              "Ⅳ",
+              "Ⅴ",
+              "Ⅵ",
+              "Ⅶ",
+              "Ⅷ",
+              "Ⅸ",
+              "Ⅹ",
+              "Ⅺ",
+              "Ⅻ",
+            ]}
+          />
         </div>
         <div className="flex-none flex items-center justify-center gap-8 flex-col w-[520px]">
           <h1 className="text-5xl lg:text-7xl font-bold">CharaChronicle</h1>

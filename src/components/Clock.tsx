@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 function radianToDegree(value: number) {
   return value * (180 / Math.PI);
 }
@@ -55,35 +57,22 @@ const black = `
   ${innerWhite}
 `;
 
-const hours = [
-  { hour: 1, label: "Ⅰ" },
-  { hour: 2, label: "Ⅱ" },
-  { hour: 3, label: "Ⅲ" },
-  { hour: 4, label: "Ⅳ" },
-  { hour: 5, label: "Ⅴ" },
-  { hour: 6, label: "Ⅵ" },
-  { hour: 7, label: "Ⅶ" },
-  { hour: 8, label: "Ⅷ" },
-  { hour: 9, label: "Ⅸ" },
-  { hour: 10, label: "Ⅹ" },
-  { hour: 11, label: "Ⅺ" },
-  { hour: 12, label: "Ⅻ" },
-];
-
 function ClockLabel({
   className,
   clipPath,
+  labels,
 }: {
   readonly className: string;
   readonly clipPath: string;
+  readonly labels: string[];
 }) {
   return (
     <g className={className} clipPath={clipPath}>
-      {hours.map(({ hour, label }) => {
-        const degree = hour * 30;
+      {labels.map((label, index) => {
+        const degree = ((index + 1) / labels.length) * 360;
         return (
           <text
-            key={hour}
+            key={index}
             x={0}
             y={-(R1 - 120)}
             textAnchor="middle"
@@ -100,9 +89,18 @@ function ClockLabel({
   );
 }
 
-function Clock() {
+function Clock({
+  className,
+  labels,
+}: {
+  readonly className?: string;
+  readonly labels: string[];
+}) {
   return (
-    <svg className="size-full" viewBox="-205 -205 410 410">
+    <svg
+      className={classNames(className, "size-full")}
+      viewBox="-205 -205 410 410"
+    >
       <defs>
         <clipPath id="whiteClip">
           <path d={white} className="fill-transparent"></path>
@@ -115,8 +113,16 @@ function Clock() {
           ></path>
         </clipPath>
       </defs>
-      <ClockLabel className="fill-gray-100" clipPath="url(#whiteClip)" />
-      <ClockLabel className="fill-gray-500" clipPath="url(#blackClip)" />
+      <ClockLabel
+        className="fill-gray-100"
+        clipPath="url(#whiteClip)"
+        labels={labels}
+      />
+      <ClockLabel
+        className="fill-gray-500"
+        clipPath="url(#blackClip)"
+        labels={labels}
+      />
     </svg>
   );
 }

@@ -1,3 +1,5 @@
+import Clock from "./Clock";
+
 interface TimelineEntry {
   time: string;
   description: (string | { type: "url"; url: string; content: string })[];
@@ -5,6 +7,7 @@ interface TimelineEntry {
 
 interface TimelineYearEntry {
   year: number;
+  yearInRoman: string;
   title: string;
   items: TimelineEntry[];
 }
@@ -12,6 +15,7 @@ interface TimelineYearEntry {
 const timelineData: TimelineYearEntry[] = [
   {
     year: 2019,
+    yearInRoman: "ⅯⅯⅩⅨ",
     title: "CharaChorder One",
     items: [
       {
@@ -30,6 +34,7 @@ const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2022,
+    yearInRoman: "ⅯⅯⅩⅩⅡ",
     title: "CharaChorder Lite & X",
     items: [
       {
@@ -59,6 +64,7 @@ const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2023,
+    yearInRoman: "ⅯⅯⅩⅩⅢ",
     title: "Master Forge",
     items: [
       {
@@ -93,6 +99,7 @@ const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2024,
+    yearInRoman: "ⅯⅯⅩⅩⅣ",
     title: "CharaChorder Two",
     items: [
       {
@@ -127,6 +134,7 @@ const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2025,
+    yearInRoman: "ⅯⅯⅩⅩⅤ",
     title: "CCIO & CC2.1",
     // title: "CCIO & CC2.1 & CCU",
     items: [
@@ -168,8 +176,16 @@ export function TimelinePages() {
           className="h-screen flex items-center justify-center flex-wrap"
         >
           <div className="flex gap-16 justify-center flex-col lg:flex-row items-center">
-            <div className="size-64 flex-none sticky font-bold text-6xl text-gray-10 flex items-center justify-center">
-              {entry.year}
+            <div className="size-64 flex-none relative">
+              <Clock
+                className="opacity-20"
+                labels={entry.yearInRoman
+                  .repeat(Math.ceil(12 / entry.yearInRoman.length))
+                  .split("")}
+              />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-10 text-6xl font-bold">
+                {entry.year}
+              </div>
             </div>
             <div className="flex-none flex items-center justify-center gap-8 flex-col w-[520px]">
               <h1 className="text-3xl lg:text-5xl font-bold">{entry.title}</h1>
