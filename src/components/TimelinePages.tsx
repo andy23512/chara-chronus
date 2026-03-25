@@ -33,25 +33,33 @@ const timelineData: TimelineYearEntry[] = [
     ],
   },
   {
-    year: 2022,
-    yearInRoman: "ⅯⅯⅩⅩⅡ",
-    title: "CharaChorder Lite & X",
+    year: 2021,
+    yearInRoman: "ⅯⅯⅩⅩⅠ",
+    title: "CharaChorder Lite",
     items: [
       {
-        time: "May",
+        time: "Apr",
         description: [
+          "Kickstarter campaign of ",
           {
             type: "url",
             url: "https://www.charachorder.com/products/charachorder-lite",
             content: "CharaChorder Lite",
           },
-          " began being sold.",
+          " started.",
         ],
       },
+    ],
+  },
+  {
+    year: 2022,
+    yearInRoman: "ⅯⅯⅩⅩⅡ",
+    title: "CharaChorder X",
+    items: [
       {
         time: "Nov",
         description: [
-          "Kickstarter of ",
+          "Kickstarter campaign of ",
           {
             type: "url",
             url: "https://www.charachorder.com/products/charachorder-x",
