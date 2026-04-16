@@ -208,7 +208,7 @@ export function TimelinePages() {
                 {entry.year}
               </div>
             </div>
-            <div className="flex-none flex items-center justify-center gap-8 flex-col w-[520px]">
+            <div className="flex-none flex items-center justify-center gap-8 flex-col w-[600px]">
               <h1 className="text-3xl lg:text-5xl font-bold">{entry.title}</h1>
               <ul className="flex flex-col lg:text-xl">
                 {entry.items.map((item, index) => (
