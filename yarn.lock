@@ -673,11 +673,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/roboto-slab/-/roboto-slab-5.2.8.tgz#3fee0f6717e17148d6bb1b96546299f1f4ba8254"
   integrity sha512-cdvOSwocP50xS01gXqnGxw7uFcCZQgn1IDlqiAmNuZP4uEVScYAKMDC+aWsbP1grn9QdMJ2frhcuVBNXniBVGA==
 
-"@fontsource/unifrakturmaguntia@^5.2.8":
-  version "5.2.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/unifrakturmaguntia/-/unifrakturmaguntia-5.2.8.tgz#4698960d290cedd27cfd01226b3eeb6eaba910ed"
-  integrity sha512-FN6yt2BPasuXuwttsz31qlgcMMx6SZdY9HFv/GPAPonFfF5e4Y11j9mGRGGXY6V0iZzaZnQ4Yx6UPRCE/ECRqA==
-
 "@hono/node-server@^1.19.9":
   version "1.19.9"
   resolved "https://registry.yarnpkg.com/@hono/node-server/-/node-server-1.19.9.tgz#8f37119b1acf283fd3f6035f3d1356fdb97a09ac"

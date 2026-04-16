@@ -77,7 +77,6 @@ function ClockLabel({
             y={-(R1 - 120)}
             textAnchor="middle"
             dominantBaseline="middle"
-            className="font-roboto"
             fontSize={250}
             transform={`rotate(${degree} 0 0)`}
           >
