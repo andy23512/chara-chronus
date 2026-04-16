@@ -23,7 +23,7 @@ function HeaderPage() {
           />
         </div>
         <div className="flex-none flex items-center justify-center gap-8 flex-col max-w-[520px] w-full">
-          <h1 className="text-5xl lg:text-7xl font-bold">CharaChronicle</h1>
+          <h1 className="text-5xl lg:text-7xl font-bold">CharaChronus</h1>
           <h2 className="w-full flex justify-between lg:text-2xl">
             <span>Every Character,</span>
             <span>Every Chord,</span>

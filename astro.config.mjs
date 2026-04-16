@@ -14,5 +14,5 @@ export default defineConfig({
 
   site: "https://andy23512.github.io",
 
-  base: "/chara-chronicle",
+  base: "/chara-chronus",
 });

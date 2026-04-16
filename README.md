@@ -1,4 +1,4 @@
-# CharaChronicle
+# CharaChronus
 
 An unofficial chronicle for CharaChorder. It records the important events and products of CharaChorder company.
 
