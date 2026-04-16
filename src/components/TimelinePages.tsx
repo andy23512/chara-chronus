@@ -174,6 +174,23 @@ const timelineData: TimelineYearEntry[] = [
     ],
   },
   {
+    year: 2026,
+    yearInRoman: "ⅯⅯⅩⅩⅥ",
+    title: "Community Owned",
+    items: [
+      {
+        time: "Apr",
+        description: [
+          {
+            type: "url",
+            url: "https://youtu.be/6kwy6dXkLqs",
+            content: "CharaChorder became community owned.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     year: null,
     yearInRoman: "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ",
     title: "To be continued...",
