@@ -28,8 +28,9 @@ change that, so prefer CSS-only solutions where possible.
 ## Adding a timeline entry
 
 Timeline content lives in the `timelineData` array in
-[`src/components/TimelinePages.tsx`](src/components/TimelinePages.tsx). Each year
-is one full-screen page:
+[`src/data/timeline.ts`](src/data/timeline.ts) — separate from the rendering in
+`src/components/TimelinePages.tsx`, so adding an event only touches data. Each
+year is one full-screen page:
 
 ```ts
 {
