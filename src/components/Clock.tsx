@@ -103,8 +103,13 @@ function Clock({
   const blackClipId = `${idPrefix}-blackClip`;
   return (
     <svg
-      className={classNames(className, "size-full")}
+      className={classNames(className, "size-full select-none")}
       viewBox="-205 -205 410 410"
+      // The numerals are decoration. Without this each clock contributes two
+      // dozen <text> nodes to the page's text, which assistive technology
+      // reads out and select-all copies.
+      aria-hidden="true"
+      focusable="false"
     >
       <defs>
         <clipPath id={whiteClipId}>

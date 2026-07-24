@@ -2,7 +2,7 @@ import Clock from "./Clock";
 
 function HeaderPage() {
   return (
-    <div className="h-screen flex items-center justify-center flex-wrap clock-background relative">
+    <div className="h-screen flex items-center justify-center flex-wrap clock-background relative px-6">
       <div className="flex gap-16 justify-center flex-col lg:flex-row items-center">
         <div className="size-64 flex-none">
           <Clock
