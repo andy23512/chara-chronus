@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "check:links": "node scripts/check-links.mjs",
     "og": "astro build && node scripts/generate-og-image.mjs",
     "astro": "astro"
   },

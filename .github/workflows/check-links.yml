@@ -1,0 +1,30 @@
+name: Check source links
+
+# The chronicle's value rests on its sources still resolving, and they rot
+# quietly. Check them on a schedule so a dead link surfaces on its own.
+on:
+  schedule:
+    # Mondays, 04:00 UTC.
+    - cron: "0 4 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "src/data/timeline.ts"
+      - "scripts/check-links.mjs"
+      - ".github/workflows/check-links.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      # No dependencies needed: the script only uses the Node standard library.
+      - name: Check every source link in the chronicle
+        run: node scripts/check-links.mjs

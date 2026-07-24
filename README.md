@@ -19,6 +19,7 @@ yarn dev
 | `yarn build`   | Build the static site into `dist/`                    |
 | `yarn preview` | Serve the built site locally                          |
 | `yarn check`   | Type-check the Astro and TypeScript sources           |
+| `yarn check:links` | Verify every source link in the chronicle still resolves |
 | `yarn og`      | Regenerate `public/image/og.png` (needs local Chrome) |
 
 The site ships no client-side JavaScript — the React components are rendered to
@@ -51,7 +52,9 @@ year is one full-screen page:
 ```
 
 Please include a source link for every entry — the value of an unofficial
-chronicle rests on being verifiable.
+chronicle rests on being verifiable. A scheduled workflow re-checks those links
+weekly and fails if one starts returning 404, so a dead source surfaces without
+anyone having to notice it.
 
 ## Social preview image
 
