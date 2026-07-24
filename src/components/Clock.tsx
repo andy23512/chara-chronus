@@ -77,6 +77,7 @@ function ClockLabel({
             textAnchor="middle"
             dominantBaseline="middle"
             fontSize={250}
+            fontWeight="bold"
             transform={`rotate(${degree} 0 0)`}
           >
             {label}

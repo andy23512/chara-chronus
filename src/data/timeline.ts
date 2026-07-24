@@ -23,7 +23,7 @@ export interface TimelineYearEntry {
 export const timelineData: TimelineYearEntry[] = [
   {
     year: 2019,
-    yearInRoman: "ⅯⅯⅩⅨ",
+    yearInRoman: "ⅩⅨ",
     title: "CharaChorder One",
     items: [
       {
@@ -42,7 +42,7 @@ export const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2021,
-    yearInRoman: "ⅯⅯⅩⅩⅠ",
+    yearInRoman: "ⅩⅩⅠ",
     title: "CharaChorder Lite",
     items: [
       {
@@ -61,7 +61,7 @@ export const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2022,
-    yearInRoman: "ⅯⅯⅩⅩⅡ",
+    yearInRoman: "ⅩⅩⅡ",
     title: "CharaChorder X",
     items: [
       {
@@ -80,7 +80,7 @@ export const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2023,
-    yearInRoman: "ⅯⅯⅩⅩⅢ",
+    yearInRoman: "ⅩⅩⅢ",
     title: "Master Forge",
     items: [
       {
@@ -115,7 +115,7 @@ export const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2024,
-    yearInRoman: "ⅯⅯⅩⅩⅣ",
+    yearInRoman: "ⅩⅩⅣ",
     title: "CharaChorder Two",
     items: [
       {
@@ -150,7 +150,7 @@ export const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2025,
-    yearInRoman: "ⅯⅯⅩⅩⅤ",
+    yearInRoman: "ⅩⅩⅤ",
     title: "CCIO & CC2.1",
     // title: "CCIO & CC2.1 & CCU",
     items: [
@@ -183,7 +183,7 @@ export const timelineData: TimelineYearEntry[] = [
   },
   {
     year: 2026,
-    yearInRoman: "ⅯⅯⅩⅩⅥ",
+    yearInRoman: "ⅩⅩⅥ",
     title: "Community Owned",
     items: [
       {
