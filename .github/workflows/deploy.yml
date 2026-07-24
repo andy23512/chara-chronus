@@ -17,9 +17,18 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # Corepack otherwise prompts before downloading Yarn, which hangs in CI.
+      COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
+      # withastro/action sets up pnpm and bun but never Corepack, so `yarn` on
+      # the runner stays the global 1.x and refuses the `packageManager` pin in
+      # package.json. Enabling Corepack first replaces that shim, so both
+      # setup-node's cache probe and `yarn install` use the pinned Yarn 4.
+      - name: Enable Corepack
+        run: corepack enable
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         # with:
