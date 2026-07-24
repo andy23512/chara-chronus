@@ -1,5 +1,27 @@
 ---
 import "../styles/global.css";
+
+interface Props {
+	/** The `/og` page is a render target for the social preview image, not content. */
+	readonly noindex?: boolean;
+	readonly showRibbon?: boolean;
+}
+
+const { noindex = false, showRibbon = true } = Astro.props;
+
+const title = "CharaChronus - An unofficial chronicle of CharaChorder";
+const description =
+	"An unofficial chronicle of CharaChorder: the milestones, products, and events of the company and its community, from its founding in 2019 onward.";
+const repository = "https://github.com/andy23512/chara-chronus";
+
+// BASE_URL has no trailing slash when `base` is configured without one, so
+// normalise before concatenating paths onto it.
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
+const pathname = Astro.url.pathname.endsWith("/")
+	? Astro.url.pathname
+	: `${Astro.url.pathname}/`;
+const canonical = new URL(pathname, Astro.site);
+const ogImage = new URL(`${base}image/og.png`, Astro.site);
 ---
 <!doctype html>
 <html lang="en">
@@ -8,13 +30,31 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="google-site-verification" content="bl8dOZwnp1uBHRnIzTpUAndXGt1aQQb1p5fcvBqA_Ao" />
-		<link rel="icon" href="/chara-chronus/favicon.ico" />
-		<title>CharaChronus - An unofficial chronicle of CharaChorder</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+		<link rel="icon" href={`${base}favicon.ico`} />
+		<link rel="canonical" href={canonical} />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="CharaChronus" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="CharaChronus - Every Character, Every Chord, Every Milestone" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
 	</head>
-	<body class="dark">
+	<body class="dark" style={`--clock-background-image: url("${base}image/clock.png")`}>
 		<slot />
-		<a class="github-fork-ribbon" href="https://github.com/andy23512/chara-chronus" target="_blank" rel="noopener noreferrer" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+		{showRibbon && <a class="github-ribbon" href={repository} target="_blank" rel="noopener noreferrer" title="Fork me on GitHub"><span>Fork me on GitHub</span></a>}
 	</body>
 </html>
 
@@ -23,5 +63,4 @@ import "../styles/global.css";
 	body {
 		margin: 0;
 	}
-	.github-fork-ribbon:before { background-color: #333; }
 </style>

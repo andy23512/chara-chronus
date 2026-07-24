@@ -22,7 +22,6 @@ function cos(degree: number) {
 
 const R1 = 205;
 const R2 = 145;
-const R1_5 = (R1 + R2) / 2 - 30;
 const R3 = 134;
 const R4 = 60;
 const theta1 = asin(R4 / R1);
@@ -91,20 +90,26 @@ function ClockLabel({
 function Clock({
   className,
   labels,
+  idPrefix,
 }: {
   readonly className?: string;
   readonly labels: string[];
+  // Several clocks share one page, so the clip path ids must be unique per
+  // instance. Passed in rather than generated so the ids stay ASCII and stable.
+  readonly idPrefix: string;
 }) {
+  const whiteClipId = `${idPrefix}-whiteClip`;
+  const blackClipId = `${idPrefix}-blackClip`;
   return (
     <svg
       className={classNames(className, "size-full")}
       viewBox="-205 -205 410 410"
     >
       <defs>
-        <clipPath id="whiteClip">
+        <clipPath id={whiteClipId}>
           <path d={white} className="fill-transparent"></path>
         </clipPath>
-        <clipPath id="blackClip">
+        <clipPath id={blackClipId}>
           <path
             d={black}
             clipRule="evenodd"
@@ -114,12 +119,12 @@ function Clock({
       </defs>
       <ClockLabel
         className="fill-gray-100"
-        clipPath="url(#whiteClip)"
+        clipPath={`url(#${whiteClipId})`}
         labels={labels}
       />
       <ClockLabel
         className="fill-gray-500"
-        clipPath="url(#blackClip)"
+        clipPath={`url(#${blackClipId})`}
         labels={labels}
       />
     </svg>

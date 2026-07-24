@@ -6,6 +6,7 @@ function HeaderPage() {
       <div className="flex gap-16 justify-center flex-col lg:flex-row items-center">
         <div className="size-64 flex-none">
           <Clock
+            idPrefix="header"
             labels={[
               "Ⅰ",
               "Ⅱ",
