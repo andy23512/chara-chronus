@@ -27,17 +27,16 @@ export const timelineData: TimelineYearEntry[] = [
     title: "CharaChorder One",
     items: [
       {
-        time: "Jun",
+        time: "Jul",
         description: [
           {
             type: "url",
-            url: "https://charachorder.com",
-            content: "CharaChorder",
+            url: "https://codelaunch.com/the-key-to-codelaunch-charachorders-startup-story/",
+            content: "CharaChorder One",
           },
-          " was founded.",
+          " was introduced at CodeLaunch 7.",
         ],
       },
-      { time: "Jun", description: ["CharaChorder One was introduced."] },
     ],
   },
   {
@@ -51,7 +50,7 @@ export const timelineData: TimelineYearEntry[] = [
           "Kickstarter campaign of ",
           {
             type: "url",
-            url: "https://www.charachorder.com/products/charachorder-lite",
+            url: "https://www.kickstarter.com/projects/charachorder/charachorder-lite-type-at-the-speed-of-thought",
             content: "CharaChorder Lite",
           },
           " started.",
@@ -70,7 +69,7 @@ export const timelineData: TimelineYearEntry[] = [
           "Kickstarter campaign of ",
           {
             type: "url",
-            url: "https://www.charachorder.com/products/charachorder-x",
+            url: "https://www.kickstarter.com/projects/charachorder/charachorder-x-type-at-the-speed-of-thought",
             content: "CharaChorder X",
           },
           " started.",
@@ -155,15 +154,14 @@ export const timelineData: TimelineYearEntry[] = [
     // title: "CCIO & CC2.1 & CCU",
     items: [
       {
-        time: "Aug",
+        time: "May",
         description: [
-          "The beta of ",
           {
             type: "url",
-            url: "https://adventure.charachorder.io/",
+            url: "https://www.youtube.com/watch?v=JTaL_3QoEGc",
             content: "CCIO",
           },
-          " started.",
+          " was teased.",
         ],
       },
       { time: "Nov", description: ["ChorderCon 2025 was held."] },
@@ -173,27 +171,10 @@ export const timelineData: TimelineYearEntry[] = [
         description: [
           {
             type: "url",
-            url: "https://www.charachorder.com/products/cc2",
+            url: "https://www.youtube.com/watch?v=geRvMmrd5n0",
             content: "CC2.1",
           },
           " was introduced.",
-        ],
-      },
-    ],
-  },
-  {
-    year: 2026,
-    yearInRoman: "ⅩⅩⅥ",
-    title: "Community Owned",
-    items: [
-      {
-        time: "Apr",
-        description: [
-          {
-            type: "url",
-            url: "https://youtu.be/6kwy6dXkLqs",
-            content: "CharaChorder became community owned.",
-          },
         ],
       },
     ],
