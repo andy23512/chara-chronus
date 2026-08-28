@@ -151,7 +151,6 @@ export const timelineData: TimelineYearEntry[] = [
     year: 2025,
     yearInRoman: "ⅩⅩⅤ",
     title: "CCIO & CC2.1",
-    // title: "CCIO & CC2.1 & CCU",
     items: [
       {
         time: "May",
@@ -165,7 +164,6 @@ export const timelineData: TimelineYearEntry[] = [
         ],
       },
       { time: "Nov", description: ["ChorderCon 2025 was held."] },
-      // { time: "Nov", description: ["CCU was revealed in ChorderCon 2025."] },
       {
         time: "Nov",
         description: [

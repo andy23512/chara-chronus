@@ -56,6 +56,11 @@ chronicle rests on being verifiable. A scheduled workflow re-checks those links
 weekly and fails if one starts returning 404, so a dead source surfaces without
 anyone having to notice it.
 
+Prefer a source that's fixed at the time of the event — a video, blog post, or
+Kickstarter campaign — over a product page. Product pages get edited in place
+as products change, so a link that was accurate when added can silently drift
+to describe a later revision instead of the one the entry is about.
+
 ## Social preview image
 
 `public/image/og.png` is a screenshot of the `/og` page, which reuses the real
