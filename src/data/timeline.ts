@@ -64,6 +64,29 @@ export const timelineData: TimelineYearEntry[] = [
     title: "CharaChorder X",
     items: [
       {
+        time: "Jan",
+        description: [
+          "CEO Riley Keen's videos of typing over 500 WPM went viral, as covered by ",
+          {
+            type: "url",
+            url: "https://www.vice.com/en/article/this-keyboard-lets-people-type-so-fast-its-banned-from-typing-competitions/",
+            content: "Vice",
+          },
+          ".",
+        ],
+      },
+      {
+        time: "May",
+        description: [
+          {
+            type: "url",
+            url: "https://www.tomshardware.com/news/charachorder-lite-chording-keyboard-now-available-for-anyone",
+            content: "CharaChorder Lite",
+          },
+          " became available for anyone to order.",
+        ],
+      },
+      {
         time: "Nov",
         description: [
           "Kickstarter campaign of ",
@@ -80,8 +103,20 @@ export const timelineData: TimelineYearEntry[] = [
   {
     year: 2023,
     yearInRoman: "ⅩⅩⅢ",
-    title: "Master Forge",
+    title: "CCOS & Master Forge",
     items: [
+      {
+        time: "Mar",
+        description: [
+          "CharaChorder released ",
+          {
+            type: "url",
+            url: "https://www.charachorder.com/blogs/news/anniversary-of-announcements-2-of-8",
+            content: "CCOS 1.0.0",
+          },
+          ", the first operating system for intelligent keyboards, free of charge.",
+        ],
+      },
       {
         time: "Nov",
         description: [
@@ -117,6 +152,18 @@ export const timelineData: TimelineYearEntry[] = [
     yearInRoman: "ⅩⅩⅣ",
     title: "CharaChorder Two",
     items: [
+      {
+        time: "Aug",
+        description: [
+          "Kickstarter campaign of ",
+          {
+            type: "url",
+            url: "https://www.kickstarter.com/projects/charachorder/the-master-forge-a-keyboard-built-for-you",
+            content: "Master Forge",
+          },
+          " started.",
+        ],
+      },
       {
         time: "Nov",
         description: [
@@ -173,6 +220,25 @@ export const timelineData: TimelineYearEntry[] = [
             content: "CC2.1",
           },
           " was introduced.",
+        ],
+      },
+    ],
+  },
+  {
+    year: 2026,
+    yearInRoman: "ⅩⅩⅥ",
+    title: "Community Owned",
+    items: [
+      {
+        time: "Jun",
+        description: [
+          "CharaChorder announced becoming a ",
+          {
+            type: "url",
+            url: "https://www.youtube.com/watch?v=hDCfRM3jteQ",
+            content: "community owned company",
+          },
+          " via a Wefunder campaign.",
         ],
       },
     ],
