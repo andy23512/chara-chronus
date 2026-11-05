@@ -227,7 +227,7 @@ export const timelineData: TimelineYearEntry[] = [
   {
     year: 2026,
     yearInRoman: "ⅩⅩⅥ",
-    title: "Community Owned",
+    title: "Community Owned & CC BALL",
     items: [
       {
         time: "Jun",
@@ -239,6 +239,17 @@ export const timelineData: TimelineYearEntry[] = [
             content: "community owned company",
           },
           " via a Wefunder campaign.",
+        ],
+      },
+      {
+        time: "Nov",
+        description: [
+          {
+            type: "url",
+            url: "https://www.youtube.com/watch?v=fGz3eYDmguY",
+            content: "CC BALL",
+          },
+          " started shipping.",
         ],
       },
     ],
