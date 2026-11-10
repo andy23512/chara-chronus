@@ -8,7 +8,7 @@ with CharaChorder. Live at https://andy23512.github.io/chara-chronus/.
 
 ## Stack
 
-Astro 5 (static output) + React 19 (for a few components) + Tailwind CSS 4 +
+Astro 7 (static output) + React 19 (for a few components) + Tailwind CSS 4 +
 TypeScript (strict, via `astro/tsconfigs/strict`). Package manager is Yarn 4
 (`packageManager` pinned in `package.json`; Yarn Berry config in `.yarnrc.yml`
 / `.yarn/`).
