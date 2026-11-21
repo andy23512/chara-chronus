@@ -15,7 +15,24 @@ permissions:
   id-token: write
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
+    steps:
+      - uses: actions/checkout@v5
+      # Corepack first, so the pinned Yarn 4 is the one that runs (see the build job).
+      - name: Enable Corepack
+        run: corepack enable
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: yarn
+      - run: yarn install --immutable
+      - run: yarn test
+
   build:
+    needs: test
     runs-on: ubuntu-latest
     env:
       # Corepack otherwise prompts before downloading Yarn, which hangs in CI.
