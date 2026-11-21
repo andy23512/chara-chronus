@@ -1,5 +1,7 @@
 # CharaChronus
 
+[![CI](https://github.com/andy23512/chara-chronus/actions/workflows/ci.yml/badge.svg)](https://github.com/andy23512/chara-chronus/actions/workflows/ci.yml)
+
 An unofficial chronicle for CharaChorder. It records the important events and products of CharaChorder company.
 
 Live site: https://andy23512.github.io/chara-chronus/
